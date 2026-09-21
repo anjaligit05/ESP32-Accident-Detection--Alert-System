@@ -73,7 +73,8 @@ The system also uses a buzzer to provide a local warning when a potential accide
                │ Location     │ Alert
                ▼              ▼
           GPS Coordinates   Smartphone
-# Pin Configuration
+
+🔌 Pin Connections
 MPU6050 → ESP32
 MPU6050
 ESP32
@@ -103,9 +104,27 @@ ESP32
 GPIO 25
 -
 GND
+GPIO 25
+-
+GND
                                
                   ESP32
                     │
                     ▼
                  Buzzer
               Local Warning
+
+⚙️ Working Principle
+Step 1 — Motion Detection
+The MPU6050 continuously measures acceleration and angular motion.
+Step 2 — Accident Detection
+The ESP32 calculates the acceleration magnitude and compares it with a predefined threshold.
+If the measured acceleration exceeds the threshold, the system considers it a potential accident event.
+Step 3 — GPS Location
+After detecting a potential accident, the ESP32 reads the GPS data from the NEO-6M module.
+Step 4 — Emergency Alert
+The ESP32 connects to the configured Wi-Fi network and sends an emergency message through the Telegram Bot.
+Step 5 — Location Sharing
+If valid GPS coordinates are available, the alert includes a Google Maps location link.
+Step 6 — Local Warning
+The buzzer is activated to provide a local audible indication of the detected event.
