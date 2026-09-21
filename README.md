@@ -14,6 +14,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
 - Send real-time emergency notifications through Telegram Bot.
 - Provide a local buzzer alert during accident detection.
 - Demonstrate IoT-based emergency communication using ESP32.
+  
   # Features
 
 - 🚗 Potential accident/impact detection
@@ -24,6 +25,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
 - 📊 Real-time sensor data processing
 - 🌐 Wi-Fi connectivity
 - 🧩 Modular sensor interfacing
+- 
 - ## 🛠️ Hardware Components
 
 | Component | Purpose |
@@ -36,7 +38,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
 | Jumper Wires | Electrical connections |
 | USB Power Supply | Powers the ESP32 |
 
-## 💻 Software & Technologies
+# 💻 Software & Technologies
 - Arduino IDE
 - C/C++
 - ESP32
@@ -45,7 +47,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
 - TinyGPS++ Library
 - UniversalTelegramBot Library
 - Telegram Bot API
-- ## 🏗️ System Architecture
+ # 🏗️ System Architecture
 
 ```text
           ┌──────────────────┐
@@ -73,7 +75,9 @@ The system also uses a buzzer to provide a local warning when a potential accide
                │ Location     │ Alert
                ▼              ▼
           GPS Coordinates   Smartphone
-## 🔌 Pin Connections
+
+#  🔌 Pin Connections
+
 MPU6050 → ESP32
 MPU6050
 ESP32
@@ -113,7 +117,8 @@ GND
                  Buzzer
               Local Warning
 
- ## ⚙️ Working Principle
+#  ⚙️ Working Principle
+
 Step 1 — Motion Detection
 The MPU6050 continuously measures acceleration and angular motion.
 Step 2 — Accident Detection
@@ -127,3 +132,96 @@ Step 5 — Location Sharing
 If valid GPS coordinates are available, the alert includes a Google Maps location link.
 Step 6 — Local Warning
 The buzzer is activated to provide a local audible indication of the detected event.
+
+- ## Project Structure
+
+
+ESP32-Accident-Detection-Alert-System/
+│
+├── README.md
+│
+├── src/
+│   └── accident_detection.ino
+│
+├── circuit/
+│   ├── circuit_diagram.jpg
+│   ├── system_architecture_diagram.png
+│   └── PIN_CONNECTIONS.md
+│
+├── images/
+│   ├── project_hardware_setup.jpg
+│   └── telegram_alert.jpg
+│
+├── docs/
+│   └── project_report.pdf
+│
+├── LICENSE
+└── .gitignore
+
+ # 🧪 Testing
+
+The prototype can be tested using the following conditions:
+Test
+Expected Result
+Normal movement
+No emergency alert
+Sudden acceleration
+Potential accident detected
+GPS available
+Location included in alert
+Wi-Fi connected
+Telegram notification sent
+Buzzer enabled
+Local warning generated
+
+ # 🔧 Configuration
+
+
+The accident detection threshold is configurable in the source code.
+const float ACCIDENT_THRESHOLD_G = 2.5;
+The threshold should be calibrated according to the actual hardware, mounting conditions and testing environment.
+
+# 📈 Future Scope
+
+
+Add GSM/4G communication for areas without Wi-Fi.
+Add vehicle ignition monitoring.
+Add cloud-based accident logging.
+Develop a dedicated Android application.
+Add automatic emergency contact notification.
+Improve accident detection using sensor fusion.
+Add a confirmation/cancellation mechanism to reduce false alerts.
+Improve GPS reliability and location accuracy.
+
+ - # 🎓 Skills Demonstrated
+This project demonstrates practical experience with:
+Embedded C/C++
+ESP32 programming
+IoT development
+Sensor interfacing
+I2C communication
+UART communication
+GPS integration
+Wi-Fi connectivity
+Telegram Bot API
+Hardware debugging
+Embedded system design
+Git and GitHub
+
+ # ⚠️ Limitations
+
+
+This project is an academic/prototype implementation.
+The acceleration threshold used for detecting potential accidents is not a certified automotive safety algorithm. Real-world deployment would require extensive testing, calibration, sensor fusion and safety validation.
+
+# 👩‍💻 Author
+
+
+Anjali Kumari
+B.Tech – Electronics & Communication Engineering
+Galgotias College of Engineering and Technology
+
+# 📄 License
+
+This project is available under the MIT License.
+
