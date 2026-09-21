@@ -73,6 +73,36 @@ The system also uses a buzzer to provide a local warning when a potential accide
                │ Location     │ Alert
                ▼              ▼
           GPS Coordinates   Smartphone
+# Pin Configuration
+MPU6050 → ESP32
+MPU6050
+ESP32
+VCC
+3.3V
+GND
+GND
+SDA
+GPIO 21
+SCL
+GPIO 22
+NEO-6M GPS → ESP32
+NEO-6M
+ESP32
+VCC
+According to module specification
+GND
+GND
+TX
+GPIO 16 (RX2)
+RX
+GPIO 17 (TX2)
+Buzzer → ESP32
+Buzzer
+ESP32
++
+GPIO 25
+-
+GND
                                
                   ESP32
                     │
