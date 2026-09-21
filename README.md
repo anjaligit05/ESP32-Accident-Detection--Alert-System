@@ -74,7 +74,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
                ▼              ▼
           GPS Coordinates   Smartphone
 
-🔌 Pin Connections
+## Pin Connections
 MPU6050 → ESP32
 MPU6050
 ESP32
@@ -114,7 +114,7 @@ GND
                  Buzzer
               Local Warning
 
-⚙️ Working Principle
+ ## ⚙️ Working Principle
 Step 1 — Motion Detection
 The MPU6050 continuously measures acceleration and angular motion.
 Step 2 — Accident Detection
