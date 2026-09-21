@@ -73,8 +73,7 @@ The system also uses a buzzer to provide a local warning when a potential accide
                │ Location     │ Alert
                ▼              ▼
           GPS Coordinates   Smartphone
-
-## Pin Connections
+## 🔌 Pin Connections
 MPU6050 → ESP32
 MPU6050
 ESP32
